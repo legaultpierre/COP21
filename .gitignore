@@ -1,1 +1,4 @@
 **/*.log
+
+hyphe_import/*.py
+hyphe_import/*.swp
