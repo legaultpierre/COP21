@@ -1,0 +1,22 @@
+{
+  "hyphe2solr":{
+    "nb_process":10,
+    "web_entity_status_filter":["IN","OUT","UNDECIDED","DISCOVERED"]
+  },
+  "solr":{
+    "host":"localhost",
+    "port":"8080",
+    "path":"solr/hyphe"
+  },
+  "mongo" : {
+    "host" : "localhost",
+    "port" : 27017,
+    "db" : "hyphe",
+    "contenttype_whitelist_filename" : "content_type_whitelist.txt"
+  },
+  "hyphe-core" : {
+    "host" : "localhost",
+    "port" : 6978,
+    "corpus_id" : "example"
+  }
+}

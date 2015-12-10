@@ -1,0 +1,248 @@
+[
+    {
+        "url": "http://citizensclimatelobby.ca", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 486: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/about-citizens-climate-lobby-canada", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 917: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/all-things-media-1", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 3110: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/ccl-canada-newsletter-fathers-and-national-aboriginal-day-2015", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 1016: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/contact-us", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 4334: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/donate", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 5954: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/join", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 642: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/join-ccl", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 642: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/laser-talk-2-carbon-fee-and-dividend", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 560: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/please-donate", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 5954: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/register-support", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 559: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/resources", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc3 in position 289: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://citizensclimatelobby.ca/content/upcoming-events", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 5103: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 486: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/about-citizens-climate-lobby-canada", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 917: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/all-things-media-1", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 3126: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/contact-us", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 4350: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/join-ccl", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 642: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/please-donate", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 5954: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/register-support", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 559: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/resources", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc3 in position 289: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/ressources-fran%C3%A7aises", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc3 in position 122: ordinal not in range(128)"
+    }, 
+    {
+        "url": "http://www.citizensclimatelobby.ca/content/upcoming-events", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 5119: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 486: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/about-citizens-climate-lobby-canada", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 917: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/all-things-media-1", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 3113: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/contact-us", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 4337: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/join-ccl", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 642: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/please-donate", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 5954: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/register-support", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 559: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/resources", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc3 in position 289: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://citizensclimatelobby.ca/content/upcoming-events", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 5106: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 486: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/about-citizens-climate-lobby-canada", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 917: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/all-things-media-1", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 3129: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/contact-us", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 4353: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/join-ccl", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 642: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/please-donate", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 5954: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/register-support", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xe2 in position 559: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/resources", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc3 in position 289: ordinal not in range(128)"
+    }, 
+    {
+        "url": "https://www.citizensclimatelobby.ca/content/upcoming-events", 
+        "encoding": "utf-8", 
+        "original_encoding": "utf-8", 
+        "error": "<type 'exceptions.UnicodeDecodeError'>: 'ascii' codec can't decode byte 0xc2 in position 5122: ordinal not in range(128)"
+    }
+]

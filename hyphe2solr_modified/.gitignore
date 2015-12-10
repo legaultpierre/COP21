@@ -1,0 +1,5 @@
+config.json
+*.log
+*.pyc
+logs
+content_type_whitelist.txt
