@@ -23,15 +23,21 @@ def verifyRequest(url, it, max):
   else :
     return -1
 
-def indexContent(url, jsonObject):
-  response = verifyRequest(url, 0, 20)
+
+def indexContent(urlStart, j, jsonObject):
+  urlWithJ = urlStart + str(j)
+  print urlWithJ
+  response = verifyRequest(urlWithJ, 0, 20)
   if (response == -1):
     print('ERROR: ' + url)
   else :
     tree = etree.fromstring(response.content)
     # tree = etree.parse('../tvrh.xml')
 
-
+    if j == 0:
+      numOfPages = int(tree.xpath('/response/result')[0].get('numFound'))
+      print numOfPages
+    
     # print tree.xpath('/response//lst[@name="termVectors"]/lst')
     i = 0
     for page in tree.xpath('/response//lst[@name="termVectors"]/lst'):
@@ -47,8 +53,13 @@ def indexContent(url, jsonObject):
         value = int(wordElement.getchildren()[0].text)
         wordsObject[word] = value
       i = i + 1
-      print namePage
+      # print namePage
       pageObject['words'] = wordsObject
       jsonObject[namePage] = pageObject
+
+    if j == 0:
+      for k in xrange(10, (numOfPages//10) * 10, 10):
+        print k
+        indexContent(urlStart, k, jsonObject)
 
 

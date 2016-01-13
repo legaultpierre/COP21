@@ -38,18 +38,18 @@ def export(jsonObject, fileName):
 
 def generateURLByWE(weIndex):
   base = 'http://jiminy.medialab.sciences-po.fr/solr/hyphe-cop21-1-new-schema/tvrh?q=web_entity_id:'
-  end = '&fl=text&tv.tf=true&rows=10&start=0'
+  end = '&fl=text&tv.tf=true&rows=10&start='
   for we in weIndex:
     url = base + we + end
     print url
-    extractDataFromServer.indexContent(url, weIndex[we]['data'])
-    print weIndex[we]['data']
+    extractDataFromServer.indexContent(url, 0, weIndex[we]['data'])
+    # print weIndex[we]['data']
     export(weIndex[we], we)
 
 def main():
   print 'hey'
   index = createWeIndex()
-  print index
+  # print index
   generateURLByWE(index)
   export(index)
 
