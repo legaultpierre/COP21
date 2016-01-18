@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import json
 import requests
+import time
 
 from lxml import etree
 
@@ -24,7 +25,7 @@ def verifyRequest(url, it, max):
     return -1
 
 
-def indexContent(urlStart, j, jsonObject):
+def indexContent(urlStart, j, jsonJoin, jsonObject, we):
   urlWithJ = urlStart + str(j)
   print urlWithJ
   response = verifyRequest(urlWithJ, 0, 20)
@@ -41,25 +42,33 @@ def indexContent(urlStart, j, jsonObject):
     # print tree.xpath('/response//lst[@name="termVectors"]/lst')
     i = 0
     for page in tree.xpath('/response//lst[@name="termVectors"]/lst'):
+      #jsonData = json.loads(jsonObject)
+      
       pageObject = {}
+    
       url = '/response//lst[@name="termVectors"]'
       namePage = page.get('name')
       url = url + '//lst[@name="' + namePage + '"]//lst[@name="text"]/lst'
-
+      
       listOfWordElements = tree.xpath(url)
       wordsObject = {}
+	  
       for wordElement in listOfWordElements:
-        word =  wordElement.get('name')
+        word = wordElement.get('name')
+        
         value = int(wordElement.getchildren()[0].text)
         wordsObject[word] = value
+        
+        if word in jsonJoin:
+          jsonJoin[word] = jsonJoin[word] + value
+        else:
+          jsonJoin[word] = value
       i = i + 1
-      # print namePage
+      
       pageObject['words'] = wordsObject
       jsonObject[namePage] = pageObject
 
     if j == 0:
       for k in xrange(10, (numOfPages//10) * 10, 10):
         print k
-        indexContent(urlStart, k, jsonObject)
-
-
+        indexContent(urlStart, k, jsonJoin, jsonObject, we)
