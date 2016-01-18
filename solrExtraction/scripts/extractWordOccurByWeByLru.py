@@ -22,6 +22,7 @@ def createWeIndex():
         weIndex[id]['lrus'] = lrus
         weIndex[id]['name'] = name
         weIndex[id]['data'] = {}
+        weIndex[id]['joinedData'] = {}
 
   return weIndex
 
@@ -42,7 +43,7 @@ def generateURLByWE(weIndex):
   for we in weIndex:
     url = base + we + end
     print url
-    extractDataFromServer.indexContent(url, 0, weIndex[we]['data'])
+    extractDataFromServer.indexContent(url, 0, weIndex[we]['joinedData'], weIndex[we]['data'], we)
     # print weIndex[we]['data']
     export(weIndex[we], we)
 
