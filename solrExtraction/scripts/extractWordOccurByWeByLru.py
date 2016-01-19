@@ -43,7 +43,7 @@ def generateURLByWE(weIndex):
   for we in weIndex:
     url = base + we + end
     print url
-    extractDataFromServer.indexContent(url, 0, weIndex[we]['joinedData'], weIndex[we]['data'], we)
+    extractDataFromServer.indexContent(url, 0, weIndex[we]['joinedData'], weIndex[we]['data'])
     # print weIndex[we]['data']
     export(weIndex[we], we)
 
