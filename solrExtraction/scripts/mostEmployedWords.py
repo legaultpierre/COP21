@@ -49,6 +49,6 @@ if __name__=='__main__':
   arguments = sys.argv
   mode = 0
   if (len(arguments) == 2):
-    if (arguments[1] > 1):
+    if (arguments[1] >= 1):
       mode = 1
   main(mode)
