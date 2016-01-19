@@ -24,15 +24,19 @@ def main():
   for f in files:
     f2 = f[:-4]
     f2=f2+'csv'
-    export('word,occurence\n', '/'+f2)
+    export('word,occurence\n', f2)
     fileData = loadData(folder + f)
     for couple in fileData:
       mot = couple[0]
       nbOccur = couple[1]
-      export(mot.encode('utf-8'), '/' + f2)
-      export(',', '/' + f2)
-      export(str(nbOccur), '/' + f2)
-      export('\n', '/' + f2)
+      export(("%s,%d\n" % (mot, nbOccur)).encode('utf-8'), f2)
+      # export("\n".join(["%s,%d\n" % (couple[0], couple[1])] for couple in fileData]), f2)
+      
+      # nbOccur = couple[1]
+      # export(mot.encode('utf-8'), '/' + f2)
+      # export(',', '/' + f2)
+      # export(str(nbOccur), '/' + f2)
+      # export('\n', '/' + f2)
     
     
 # Exports the result to a file
