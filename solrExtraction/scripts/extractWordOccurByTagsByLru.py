@@ -32,14 +32,15 @@ def export(jsonObject, fileName):
       json.dump(jsonObject, outfile)
 
 def generateURLByTag(tagIndex):
+  step = 200
   base = 'http://jiminy.medialab.sciences-po.fr/solr/hyphe-cop21-1-new-schema/tvrh?q='
-  end = '&fl=text&tv.tf=true&rows=200&start='
+  end = '&fl=text&tv.tf=true&rows=%d&start=' % step
   for tag in tagIndex:
     for v in tagIndex[tag]['values']:
       url = base + tag + '=' + v + end
       #print url
       tagIndex[tag]['data'][v]={}
-      extractDataFromServer.indexContent(url, 0, tagIndex[tag]['joinedData'], tagIndex[tag]['data'][v])
+      extractDataFromServer.indexContent(url, 0, tagIndex[tag]['joinedData'], tagIndex[tag]['data'][v], step)
       #print tagIndex[tag]['data']
     export(tagIndex[tag], tag)
 

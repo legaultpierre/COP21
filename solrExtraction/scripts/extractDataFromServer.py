@@ -25,7 +25,7 @@ def verifyRequest(url, it, max):
     return -1
 
 
-def indexContent(urlStart, j, jsonJoin, jsonObject):
+def indexContent(urlStart, j, jsonJoin, jsonObject, step):
   urlWithJ = urlStart + str(j)
   print urlWithJ
   response = verifyRequest(urlWithJ, 0, 20)
@@ -69,6 +69,7 @@ def indexContent(urlStart, j, jsonJoin, jsonObject):
       jsonObject[namePage] = pageObject
 
     if j == 0:
-      for k in xrange(200, (numOfPages//200) * 200, 200):
-        print k
-        indexContent(urlStart, k, jsonJoin, jsonObject)
+      print (numOfPages//step)*step
+      for k in xrange(0, (numOfPages//step)):
+        print 'in loop %d' %k
+        indexContent(urlStart, (k+1) * step, jsonJoin, jsonObject, step)
