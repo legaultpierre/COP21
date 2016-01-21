@@ -69,6 +69,6 @@ def indexContent(urlStart, j, jsonJoin, jsonObject):
       jsonObject[namePage] = pageObject
 
     if j == 0:
-      for k in xrange(10, (numOfPages//10) * 10, 10):
+      for k in xrange(200, (numOfPages//200) * 200, 200):
         print k
         indexContent(urlStart, k, jsonJoin, jsonObject)

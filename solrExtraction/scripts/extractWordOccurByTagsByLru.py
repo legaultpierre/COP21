@@ -33,7 +33,7 @@ def export(jsonObject, fileName):
 
 def generateURLByTag(tagIndex):
   base = 'http://jiminy.medialab.sciences-po.fr/solr/hyphe-cop21-1-new-schema/tvrh?q='
-  end = '&fl=text&tv.tf=true&rows=10&start='
+  end = '&fl=text&tv.tf=true&rows=200&start='
   for tag in tagIndex:
     for v in tagIndex[tag]['values']:
       url = base + tag + '=' + v + end
