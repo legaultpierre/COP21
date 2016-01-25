@@ -1,5 +1,5 @@
 **/*.log
-
+**/*.pyc
 **/NOT_COMMIT*
 
 hyphe_import/*.py
