@@ -24,7 +24,7 @@ def loadData(file):
     
     
 def main():
-  folder = '../extractedData/indexedByTag/'
+  folder = '../../extractedData/indexedByTag/'
   directories = getDir(folder)
   for d in directories:
     dir = d.split('/')
@@ -54,9 +54,10 @@ def main():
     
 # Exports the result to a file
 def export(string, fileName, dir):
-  if not os.path.exists('../extractedData/topWords/indexedByTag/csvFiles/' +dir):
-    os.makedirs('../extractedData/topWords/indexedByTag/csvFiles/' +dir)
-  with open('../extractedData/topWords/indexedByTag/csvFiles/' +dir+'/'+ fileName, 'w') as outfile:
+  folder = '../../extractedData/topWords/indexedByTag/csvFiles/'
+  if not os.path.exists(folder +dir):
+    os.makedirs(folder +dir)
+  with open(folder +dir+'/'+ fileName, 'w') as outfile:
       outfile.write(string)
       
       

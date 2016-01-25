@@ -19,7 +19,7 @@ def loadData(file):
     
     
 def main():
-  folder = '../extractedData/topWords/indexesByWE/'
+  folder = '../../extractedData/topWords/indexesByWE/'
   files = getFiles(folder)
   for f in files:
     f2 = f[:-4]
@@ -41,7 +41,7 @@ def main():
     
 # Exports the result to a file
 def export(string, fileName):
-  with open('../extractedData/topWords/indexesByWE/csvFiles/' + fileName, 'a') as outfile:
+  with open('../../extractedData/topWords/indexesByWE/csvFiles/' + fileName, 'a') as outfile:
       outfile.write(string)
       
       

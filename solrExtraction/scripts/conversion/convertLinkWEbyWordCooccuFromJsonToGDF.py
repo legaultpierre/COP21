@@ -32,8 +32,8 @@ def deleteFileIfExists(fileName):
 
 def main():
   fileName = 'wordIndexLinksWithWE'
-  f = '../extractedData/' + fileName + '.json'
-  outputFile = '../extractedData/gdfFiles/' + fileName + '.gdf'
+  f = '../../extractedData/' + fileName + '.json'
+  outputFile = '../../extractedData/gdfFiles/' + fileName + '.gdf'
   nodeList = []
   edgesList = []
   deleteFileIfExists(outputFile)
@@ -50,7 +50,7 @@ def main():
           wej = wes[j]
           weight = dataWord['wes'][wei] + dataWord['wes'][wej]
           edgesList.append(("%s,%s,\"%s\",%d\n" % (wei, wej, word, weight)).encode('utf-8'))
-    writeNodes('COP21.csv', nodeList, outfile)
+    writeNodes('../COP21.csv', nodeList, outfile)
     writeEdges(edgesList, outfile)
 
 if __name__=='__main__':
