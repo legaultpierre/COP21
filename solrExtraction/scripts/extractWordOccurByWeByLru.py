@@ -37,22 +37,29 @@ def export(jsonObject, fileName):
       json.dump(jsonObject, outfile)
 
 
-def generateURLByWE(weIndex):
+def generateURLByWE(weIndex, startWE):
+  if startWE is None :
+    found = True
+  else:
+    found = False
+
   step = 50
   base = 'http://jiminy.medialab.sciences-po.fr/solr/hyphe-cop21-1-new-schema/tvrh?q=web_entity_id:'
   end = '&fl=text&tv.tf=true&rows=%d&start=' % step
   for we in weIndex:
-    url = base + we + end
-    print url
-    extractDataFromServer.indexContent(url, 0, weIndex[we]['joinedData'], weIndex[we]['data'], step)
-    # print weIndex[we]['data']
-    export(weIndex[we], we)
+    if ((not found) & (we == startWE)):
+      found = True
+    if (found):
+      url = base + we + end
+      print url
+      extractDataFromServer.indexContent(url, 0, weIndex[we]['joinedData'], weIndex[we]['data'], step)
+      # print weIndex[we]['data']
+      export(weIndex[we], we)
 
-def main():
+def main(arg):
   print 'hey'
   index = createWeIndex()
   # print index
-  generateURLByWE(index)
-  export(index)
+  generateURLByWE(index, arg)
 
-main()
+main('041b782a-873e-44d2-87a7-c806c620114e')
