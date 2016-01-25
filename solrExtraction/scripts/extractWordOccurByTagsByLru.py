@@ -1,6 +1,6 @@
 import csv
 import json
-import extractDataFromServerByTagValue
+import extractDataFromServer
 import os
 
 webentities_file = 'COP21_tags.csv'
@@ -43,7 +43,7 @@ def generateURLByTag(tagIndex):
       url = base + tag + '=' + v + end
       #print url
       tagIndex[tag]['data'][v]={}
-      extractDataFromServerByTagValue.indexContent(url, 0, tagIndex[tag]['joinedData'], tagIndex[tag]['data'][v], 10)
+      extractDataFromServer.indexContent(url, 0, tagIndex[tag]['joinedData'], tagIndex[tag]['data'][v], 10)
       export(tagIndex[tag], tag, v)
       #print tagIndex[tag]['data']
 
