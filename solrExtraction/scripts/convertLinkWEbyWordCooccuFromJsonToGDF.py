@@ -20,7 +20,7 @@ def writeNodes(csvFileName, nodeList, outfile):
         outfile.write(("%s,\"%s\"\n" % (id, name)).encode('utf-8'))
 
 def writeEdges(edgesList, outfile):
-  outfile.write('edgedef>node1 VARCHAR,node2 VARCHAR, label VARCHAR\n')
+  outfile.write('edgedef>node1 VARCHAR,node2 VARCHAR, label VARCHAR, weight DOUBLE\n')
   for edge in edgesList:
     outfile.write(edge)
 
@@ -40,7 +40,6 @@ def main():
   with open(outputFile, 'a') as outfile:
     fileData = loadData(f)
     for word in fileData:
-      print word
       dataWord = fileData[word]
       wes =  dataWord['wes'].keys()
       for i in xrange(0, len(wes)):
@@ -49,7 +48,8 @@ def main():
           nodeList.append(wei)
         for j in xrange(i+1, len(wes)):
           wej = wes[j]
-          edgesList.append(("%s,%s,\"%s\"\n" % (wei, wej, word)).encode('utf-8'))
+          weight = dataWord['wes'][wei] + dataWord['wes'][wej]
+          edgesList.append(("%s,%s,\"%s\",%d\n" % (wei, wej, word, weight)).encode('utf-8'))
     writeNodes('COP21.csv', nodeList, outfile)
     writeEdges(edgesList, outfile)
 
