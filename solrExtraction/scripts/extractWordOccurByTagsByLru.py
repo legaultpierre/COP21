@@ -10,8 +10,7 @@ def createTagIndex():
   # Iterate over the web entities
   with open(webentities_file) as f :
     i = 0
-    # J'ai retire AREA et COUNTRY
-    tags=['ACTORS_TYPE','ANTHROPOGENIC_CLIMATE_CHANGE','MITIGATION_ADAPTATION','INDUSTRIAL_DELEGATION','THEMATIC_DELEGATION','COLLECTION']#,'ABSTRACT_DRAFT','ABSTRACT','COMMENT']
+    tags=['ACTORS_TYPE','AREA','COUNTRY','ANTHROPOGENIC_CLIMATE_CHANGE','MITIGATION_ADAPTATION','INDUSTRIAL_DELEGATION','THEMATIC_DELEGATION','COLLECTION']#,'ABSTRACT_DRAFT','ABSTRACT','COMMENT']
     for tag in tags :
       print tag
       tagIndex[tag]={}
