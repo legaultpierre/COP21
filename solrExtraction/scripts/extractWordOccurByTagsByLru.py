@@ -1,6 +1,6 @@
 import csv
 import json
-import extractDataFromServerByTagValue
+import extractDataFromServer
 import os
 
 webentities_file = 'COP21_tags.csv'
@@ -10,8 +10,7 @@ def createTagIndex():
   # Iterate over the web entities
   with open(webentities_file) as f :
     i = 0
-    # J'ai retire AREA et COUNTRY
-    tags=['ACTORS_TYPE','ANTHROPOGENIC_CLIMATE_CHANGE','MITIGATION_ADAPTATION','INDUSTRIAL_DELEGATION','THEMATIC_DELEGATION','COLLECTION']#,'ABSTRACT_DRAFT','ABSTRACT','COMMENT']
+    tags=['ACTORS_TYPE','AREA','COUNTRY','ANTHROPOGENIC_CLIMATE_CHANGE','MITIGATION_ADAPTATION','INDUSTRIAL_DELEGATION','THEMATIC_DELEGATION','COLLECTION']#,'ABSTRACT_DRAFT','ABSTRACT','COMMENT']
     for tag in tags :
       print tag
       tagIndex[tag]={}
@@ -29,10 +28,10 @@ def createTagIndex():
             #print tagIndex[tag]['values']
   return tagIndex
 
-def export(jsonObject, fileName, tag):
-  if not os.path.exists('../extractedData/indexedByTag/'+fileName+'/'):
-    os.makedirs('../extractedData/indexedByTag/'+fileName)
-  with open('../extractedData/indexedByTag/' + fileName + '/'+tag+ '.json', 'w') as outfile:
+def export(jsonObject, dirName, tag):
+  if not os.path.exists('../extractedData/indexedByTag/'+dirName+'/'):
+    os.makedirs('../extractedData/indexedByTag/'+dirName)
+  with open('../extractedData/indexedByTag/' + dirName + '/'+tag+ '.json', 'w') as outfile:
       json.dump(jsonObject, outfile)
 
 def generateURLByTag(tagIndex):
@@ -43,7 +42,7 @@ def generateURLByTag(tagIndex):
       url = base + tag + '=' + v + end
       #print url
       tagIndex[tag]['data'][v]={}
-      extractDataFromServerByTagValue.indexContent(url, 0, tagIndex[tag]['joinedData'], tagIndex[tag]['data'][v], 10)
+      extractDataFromServer.indexContent(url, 0, tagIndex[tag]['joinedData'], tagIndex[tag]['data'][v], 10)
       export(tagIndex[tag], tag, v)
       #print tagIndex[tag]['data']
 
