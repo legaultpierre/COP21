@@ -15,14 +15,17 @@ from lxml import etree
 
 
 def verifyRequest(url, it, max):
-  response = requests.get(url)
-  if (response.status_code == 200):
-    return response
-  elif (it < max):
-    time.sleep(2)
-    return verifyRequest(url, it + 1, max)
-  else :
-    return -1
+  try: 
+    response = requests.get(url)
+    if (response.status_code == 200):
+      return response
+    elif (it < max):
+      time.sleep(2)
+      return verifyRequest(url, it + 1, max)
+    else :
+      return -1
+  except value:
+    verifyRequest(url, it, max)
 
 
 def indexContent(urlStart, j, jsonJoin, jsonObject, step):

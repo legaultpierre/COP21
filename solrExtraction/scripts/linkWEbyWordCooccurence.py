@@ -26,10 +26,15 @@ def indexWords(we, newData, wordIndex):
       wordIndex[word]['count'] += count
       wordIndex[word]['wes'][we] = count
 
-def filterWordIndex(wordIndex):
+def filterWordIndex(wordIndex, maximalCount, minimalCount, rateMax, rateMin):
   newIndex = {}
   for word in wordIndex:
-    if ((wordIndex[word]['count'] > 99) & (len(wordIndex[word]['wes']) > 1)):
+    # Filters by the occurence count
+    if ((wordIndex[word]['count'] < maximalCount) and
+        (wordIndex[word]['count'] > minimalCount) and
+        (len(wordIndex[word]['wes']) > 1 and
+        (len(wordIndex[word]['wes']) <= (len(wordIndex)*rateMax)) and
+        (len(wordIndex[word]['wes']) >= (len(wordIndex)*rateMin))):
       newIndex[word] = wordIndex[word]
   return newIndex
 
@@ -47,7 +52,7 @@ def main():
     we = f[:-5]
     index[we] = loadData(folder + f)
     indexWords(we, index[we], wordIndex)
-  wordIndex = filterWordIndex(wordIndex)
+  wordIndex = filterWordIndex(wordIndex, 600000, 5000, 1, 0.8)
   export(wordIndex, 'wordIndexLinksWithWE')
 
 

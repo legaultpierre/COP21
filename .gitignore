@@ -1,5 +1,7 @@
 **/*.log
 
+**/NOT_COMMIT*
+
 hyphe_import/*.py
 hyphe_import/*.swp
 
