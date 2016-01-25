@@ -29,10 +29,10 @@ def createTagIndex():
             #print tagIndex[tag]['values']
   return tagIndex
 
-def export(jsonObject, fileName, tag):
-  if not os.path.exists('../extractedData/indexedByTag/'+fileName+'/'):
-    os.makedirs('../extractedData/indexedByTag/'+fileName)
-  with open('../extractedData/indexedByTag/' + fileName + '/'+tag+ '.json', 'w') as outfile:
+def export(jsonObject, dirName, tag):
+  if not os.path.exists('../extractedData/indexedByTag/'+dirName+'/'):
+    os.makedirs('../extractedData/indexedByTag/'+dirName)
+  with open('../extractedData/indexedByTag/' + dirName + '/'+tag+ '.json', 'w') as outfile:
       json.dump(jsonObject, outfile)
 
 def generateURLByTag(tagIndex):
