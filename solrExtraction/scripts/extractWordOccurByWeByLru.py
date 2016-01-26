@@ -38,7 +38,7 @@ def export(jsonObject, fileName):
 
 
 def generateURLByWE(weIndex, startWE):
-  if startWE is None :
+  if startWE == '' :
     found = True
   else:
     found = False
@@ -62,4 +62,4 @@ def main(arg):
   # print index
   generateURLByWE(index, arg)
 
-main('041b782a-873e-44d2-87a7-c806c620114e')
+main('')
