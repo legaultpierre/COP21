@@ -46,7 +46,7 @@ def byWE():
     words = fileData['joinedData']
     fileName=f[:-5]
     sortedWords = sortWords(words)
-    export(sortedWords, f, path)
+    export(sortedWords, fileName, path)
 
 def byTAG():
   mode = 'indexedByTag'
