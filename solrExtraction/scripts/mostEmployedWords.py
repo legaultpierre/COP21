@@ -1,5 +1,6 @@
 import sys
 import json
+import os
 from os import listdir
 from os.path import isfile, join
 
@@ -28,22 +29,48 @@ def sortWords(words):
   return sorted(list, key=getCount, reverse=True)
 
 # Exports the result to a file
-def export(jsonObject, fileName):
-  with open('../extractedData/topWords/' + fileName, 'w') as outfile:
-      json.dump(jsonObject, outfile)
+def export(jsonObject, fileName,path):
+  #path = '../extractedData/topWords/'
+  if not os.path.exists(path):
+    os.makedirs(path)
+  with open(path + fileName + '.json', 'w') as outfile:
+    json.dump(jsonObject, outfile)
 
-def main(modeNumber):
-  if (modeNumber == 0):
-    mode = 'indexedByTag'
-  else:
-    mode = 'indexesByWE'
+def byWE():
+  mode = 'indexesByWE'
+  path='../extractedData/topWords/' + mode + '/'
   folder = '../extractedData/' + mode + '/'
   files = getFiles(folder)
   for f in files:
     fileData = loadData(folder + f)
     words = fileData['joinedData']
+    fileName=f[:-5]
     sortedWords = sortWords(words)
-    export(sortedWords, mode + '/' + f)
+    export(sortedWords, f, path)
+
+def byTAG():
+  mode = 'indexedByTag'
+  folder = '../extractedData/' + mode + '/'
+  files = getFiles(folder)
+  for f in files:
+    tag=f[:-5]
+    #print tag
+    path='../extractedData/topWords/'+ mode + '/' + tag + '/'
+    #print path
+    fileData = loadData(folder + f)
+    for value in fileData:
+      fileName=value
+      words = fileData[value]
+      sortedWords = sortWords(words)
+      export(sortedWords,value,path)
+
+
+
+def main(modeNumber):
+  if (modeNumber == 0):
+    byWE()
+  else:
+    byTAG()
 
 if __name__=='__main__':
   arguments = sys.argv
