@@ -47,7 +47,7 @@ def exportList(fileName, string):
 def main():
   wordList = generateWordList()
   print wordList
-  base = 'top-words-most-sites-by-'
+  base = 'COP21-1-top-words-most-sites-by-'
   exportList(base + 'count', generateStringFromList(generateTopByCount(wordList), 'count'))
   exportList(base + 'web-entites-links', generateStringFromList(generateTopByNbWE(wordList), 'wes'))
 

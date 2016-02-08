@@ -40,7 +40,7 @@ def main():
   step = 0.05
   wordList = generateWordStat(maxOccur, minOccur, maxRate, minRate, step)
   print wordList
-  base = 'words-number-repartition-over-site-repartition'
+  base = 'COP21-1-words-number-repartition-over-site-repartition'
   exportList(base, generateStringFromList(wordList))
 
 if __name__=='__main__':
