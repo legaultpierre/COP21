@@ -1,0 +1,50 @@
+Mitigation:
+  - Not applicable: #f05252 (red)
+  - Don't know: #cccccc (grey)
+  - Mit_adap: #62a131 (green)
+  - Mitigation: #e25bbd (purple)
+  - Adaptation: #D87823 (orange)
+
+Countries:
+  - Don't know: #cccccc (grey)
+  - USA: #f05252 (red)
+  - International: #8985e1 (blue)
+  - UK: #d87823 (orange)
+  - Others: #62a131 (green)
+
+Industrial Delegation:
+  - Not applicable: #f05252 (red)
+  - Don't know: #cccccc (grey)
+  - Energy: #23B3E1(blue)
+  - Finance: #d87823 (orange)
+  - Transport: #62a131 (green)
+  - Tourisme: #e25bbd (purple)
+
+Anthropogenic:
+  - Not applicable: #f05252 (red)
+  - Don't know: #cccccc (grey)
+  - Yes: #62a131 (green)
+  - No: #d87823 (orange)
+
+Actors type:
+  - Don't know: #cccccc (grey)
+  - bloggers: #f05252 (red)
+  - Association: non profit organisation: #ff6226 (orange)
+  - Institution: 
+  - Academic: #ac9bff (blue-grey)
+  - Activist: #b5cc88 (light caca d'oie)
+  - Agency: #504e09 (caca d'oie)
+  - Company: #29e300 (fluo green)
+  - Event: #ff63c3 (fluo pink)
+  - Foundation: #8eb700 (medium caca d'oie)
+  - Governmental project: #00d0b9 (light electric blue)
+  - Initiative: #c35f3d (red-brown)
+  - Institution: #00ddff (electric blue)
+  - Media: #00634d (dark green blue)
+  - NGO: #e1b7c5 (light purple)
+  - Other: #713a5e (dark purple)
+  - Politician: #ff8c00 (light orange)
+  - Research project: #d8a400 (mustard)
+  - Think tank: #00c5ff (electric blue)
+  - Trade Union: #007aa0 (dark blue)
+  - University: #ff607d (pink)
